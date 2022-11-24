@@ -1,5 +1,5 @@
 {{- if .Values.route.create -}}
-apiVersion: v1
+apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: java-client-ol
