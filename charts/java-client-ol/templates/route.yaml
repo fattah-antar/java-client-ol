@@ -1,0 +1,15 @@
+{{- if .Values.route.create -}}
+apiVersion: v1
+kind: Route
+metadata:
+  name: java-client-ol
+spec:
+  port:
+    targetPort: 9080-tcp
+  to:
+    kind: Service
+    name: java-client-ol
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+{{- end }}
